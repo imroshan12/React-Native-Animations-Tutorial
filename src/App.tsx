@@ -5,14 +5,14 @@ import { NavigationContainer } from '@react-navigation/native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { Provider } from 'react-redux'
 import store from '../android/app/src/redux/store'
-import RootStack from './navigation'
+import NavigationStack from './navigation/NavigationStack'
 
 export default function App() {
   return (
     <Provider store={store}>
       <GestureHandlerRootView>
         <NavigationContainer>
-          <RootStack />
+          <NavigationStack />
         </NavigationContainer>
       </GestureHandlerRootView>
     </Provider>
