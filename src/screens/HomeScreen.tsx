@@ -18,7 +18,7 @@ const HomeScreen = () => {
       <View style={styles.headerSection}>
         <Image
           source={{
-            uri: 'https://cdn.dribbble.com/users/1162077/screenshots/3848914/media/7ed7d5ca2b1e5b8c8d3c1c1e2b1e5b8c.png',
+            uri: 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
           }}
           style={styles.heroImage}
         />
