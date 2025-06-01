@@ -8,9 +8,12 @@ import {
   ScrollView,
   Image,
 } from 'react-native'
+import { useDispatch } from 'react-redux'
+import { yourAction } from '../redux/rootReducers/yourReducer'
 
 const HomeScreen = () => {
   const navigation = useNavigation()
+  const dispatch = useDispatch()
   return (
     <ScrollView
       style={styles.container}
@@ -50,6 +53,11 @@ const HomeScreen = () => {
       <TouchableOpacity
         style={styles.ctaButton}
         onPress={() => {
+          dispatch(
+            yourAction({
+              data: 'Sample Redux',
+            }),
+          )
           navigation.dispatch(DrawerActions.openDrawer())
         }}>
         <Text style={styles.ctaText}>Get Started</Text>

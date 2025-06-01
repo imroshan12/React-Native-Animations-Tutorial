@@ -12,8 +12,11 @@ export const yourReducerSlice = createSlice({
       // Handle your action here
       state.status = 'loading'
     },
+    yourActionSuccess: (state, action) => {
+      state.status = action.payload.status
+    },
   },
 })
 
 export default yourReducerSlice.reducer
-export const { yourAction } = yourReducerSlice.actions
+export const { yourAction, yourActionSuccess } = yourReducerSlice.actions
